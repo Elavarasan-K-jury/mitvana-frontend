@@ -33,8 +33,7 @@ import {
   removeProductFromWishlist,
 } from "@src/api/services/wishlistService";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { afacad } from "../_app";
+import { afacad } from "@src/lib/fonts";
 import {
   ChevronLeft,
   ChevronRight,

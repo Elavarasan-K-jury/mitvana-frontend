@@ -3,7 +3,6 @@ import "../assets/scss/app.scss";
 import "@assets/icons/font-icon.css";
 import "../styles/globals.css";
 import "../styles/Below_footer.css";
-import { Afacad, Work_Sans } from "next/font/google";
 import { ProductProvider } from "@src/context/ProductContext";
 import WhatsappButton from "@src/components/WhatsappButton";
 import { CartWishlistProvider } from "@src/context/CartWishlistContext";
@@ -11,16 +10,8 @@ import { useEffect } from "react";
 import { useCartStore } from "@src/store/cartStore";
 import { getItem } from "@src/api/localStorage";
 import { Toaster } from "react-hot-toast";
-
-export const workSans = Work_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-export const afacad = Afacad({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
+import "react-toastify/dist/ReactToastify.css";
+import { workSans } from "@src/lib/fonts";
 
 export default function App({ Component, pageProps }) {
   const { setCartItem } = useCartStore();

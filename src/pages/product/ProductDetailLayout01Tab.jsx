@@ -11,7 +11,7 @@ import {
 } from "react-bootstrap";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import { afacad } from "../_app";
+import { afacad } from "@src/lib/fonts";
 import { backendUrl } from "@src/api/axios";
 import { addReview, getReview } from "@src/api/services/reviewService";
 import Rating from "@mui/material/Rating";

@@ -8,7 +8,6 @@ import {
 import { ToastContainer, toast } from "react-toastify";
 
 import { backendUrl } from "@src/api/axios";
-import "react-toastify/dist/ReactToastify.css";
 import { useCartStore } from "@src/store/cartStore";
 import Link from "next/link";
 import { CartWishlistContext } from "@src/context/CartWishlistContext";
