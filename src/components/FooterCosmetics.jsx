@@ -329,9 +329,9 @@ const FooterCosmetics = () => {
             <Link href="https://www.facebook.com" className="d-inline-block">
               <i className="facl facl-facebook text-zinc-500 text-xl"></i>
             </Link>
-            <Link href="https://twitter.com" className="d-inline-block">
+            {/* <Link href="https://twitter.com" className="d-inline-block">
               <i className="facl facl-twitter text-zinc-500 text-xl"></i>
-            </Link>
+            </Link> */}
             <Link href="https://www.instagram.com" className="d-inline-block">
               <i className="facl facl-instagram text-zinc-500 text-xl"></i>
             </Link>
