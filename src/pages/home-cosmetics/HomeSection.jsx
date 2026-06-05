@@ -2,9 +2,12 @@ import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import slide1 from "@assets/images/home-bags/bg1.png";
-import slide2 from "@assets/images/home-bags/bg2.png";
-import slide3 from "@assets/images/home-bags/bg3.jpg";
+import slide1 from "@assets/images/home-bags/Anti Dandruff S.png";
+import slide2 from "@assets/images/home-bags/Cleanising Milk.png";
+import slide3 from "@assets/images/home-bags/Conditioning Shampoo.png";
+import slide4 from "@assets/images/home-bags/Daily Moisturising shampoo.png";
+
+
 
 import "flickity/css/flickity.css";
 
@@ -39,20 +42,26 @@ const HomeSection = () => {
     {
       id: 1,
       pic: slide1,
-      title: "Mitvana's Intimate Wash",
-      subtitle: "with Neem & Chamomile",
+      title: "Mitvana's Anti-Dandruff Shampoo",
+      subtitle: "with Licorice & Juniper",
     },
     {
       id: 2,
       pic: slide2,
-      title: "Mitvana's Vitalizing Hair Oil",
-      subtitle: "with Amla & Centella",
+      title: "Mitvana's Cleansing Milk",
+      subtitle: "with Saffron & Almond",
     },
     {
       id: 3,
       pic: slide3,
-      title: "Mitvana's Derma Face Wash",
-      subtitle: "with Neem & Turmeric",
+      title: "Mitvana's Conditioning Shampoo",
+      subtitle: "with Detangler Aloe Vera & Fenugreek",
+    },
+    {
+      id: 4,
+      pic: slide4,
+      title: "Mitvana's Daily Moisturising Lotion",
+      subtitle: "with Aloe Vera, Olive Oil & Wheat Germ Oil",
     },
   ];
 

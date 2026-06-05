@@ -543,10 +543,10 @@ img {
   }
 }
 
-.modal-fade {
+/* .modal-fade {
   animation: modalFade 0.3s ease;
-}
-
+} */
+/* 
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -558,7 +558,7 @@ img {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #9ca3af;
-}
+} */
 
 @keyframes fadeInScale {
   from {
