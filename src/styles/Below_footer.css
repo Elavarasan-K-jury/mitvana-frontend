@@ -1,0 +1,435 @@
+/* =========================================
+   MITVANA ABOUT SECTION
+========================================= */
+
+.mitvana-about-section {
+  background: linear-gradient(
+    to bottom,
+    #f8fbf8 0%,
+    #ffffff 100%
+  );
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: #e8f4ec;
+  color: #0c4b47;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.hero-content h1 span {
+  color: #0c4b47;
+}
+
+.hero-content p {
+  max-width: 760px;
+  margin: auto;
+  color: #666;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 46px;
+  font-weight: 800;
+  color: #222;
+  display: inline-block;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 4px;
+  background: #0c4b47;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+}
+
+/* =========================================
+   FEATURE & CATEGORY CARDS
+========================================= */
+
+.feature-card,
+.category-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 32px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(12, 75, 71, 0.08);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05);
+  transition: all 0.35s ease;
+}
+
+.feature-card::before,
+.category-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    #0c4b47,
+    #4aa37f
+  );
+}
+
+.feature-card:hover,
+.category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(12, 75, 71, 0.12);
+}
+
+.feature-card svg {
+  font-size: 42px;
+  color: #0c4b47;
+  margin-bottom: 18px;
+}
+
+.feature-card h5 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* =========================================
+   CATEGORY CARDS
+========================================= */
+
+.category-icon {
+  font-size: 42px;
+  color: #0c4b47;
+  margin-bottom: 20px;
+}
+
+.category-card h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.category-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-card ul li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #e7e7e7;
+  color: #555;
+  font-size: 15px;
+}
+
+.category-card ul li:last-child {
+  border-bottom: none;
+}
+
+/* =========================================
+   SEO CONTENT BOX
+========================================= */
+
+.seo-content {
+  background: #fff;
+  padding: 40px;
+  border-radius: 24px;
+  margin-top: 60px;
+  border: 1px solid rgba(12, 75, 71, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.seo-content p {
+  color: #555;
+  line-height: 1.9;
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.seo-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================
+   MODERN ACCORDION
+========================================= */
+
+.modern-accordion {
+  margin-top: 40px;
+}
+
+.accordion-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  border: 1px solid rgba(12, 75, 71, 0.08);
+  transition: all 0.3s ease;
+}
+
+.accordion-card.active {
+  box-shadow: 0 15px 35px rgba(12, 75, 71, 0.1);
+}
+
+.accordion-header-custom {
+  width: 100%;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 24px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+.accordion-card.active .accordion-header-custom {
+  background: #f4faf7;
+  color: #0c4b47;
+}
+
+.accordion-icon {
+  font-size: 30px;
+  font-weight: 300;
+  color: #0c4b47;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.accordion-content.show {
+  max-height: 300px;
+}
+
+.accordion-content p {
+  padding: 0 30px 25px;
+  margin: 0;
+  color: #666;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.cta-section {
+  margin-top: 90px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #0c4b47,
+    #1f6b66
+  );
+  color: white;
+  border-radius: 28px;
+  padding: 70px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  top: -120px;
+  right: -120px;
+}
+
+.cta-section::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 50%;
+  bottom: -120px;
+  left: -120px;
+}
+
+.cta-section h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-section p {
+  font-size: 18px;
+  max-width: 650px;
+  margin: auto;
+  opacity: 0.95;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  background: white;
+  color: #0c4b47;
+  padding: 14px 34px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-btn:hover {
+  background: #f8f8f8;
+  color: #0c4b47;
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+  .hero-content h1 {
+    font-size: 44px;
+  }
+
+  .section-title h2 {
+    font-size: 38px;
+  }
+
+  .cta-section h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mitvana-about-section {
+    padding: 60px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .section-title {
+    margin-top: 60px;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .feature-card,
+  .category-card {
+    padding: 24px;
+  }
+
+  .seo-content {
+    padding: 25px;
+  }
+
+  .accordion-header-custom {
+    padding: 20px;
+    font-size: 17px;
+  }
+
+  .accordion-content p {
+    padding: 0 20px 20px;
+  }
+
+  .cta-section {
+    padding: 50px 25px;
+    border-radius: 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 28px;
+  }
+
+  .cta-section p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+  }
+
+  .feature-card h5 {
+    font-size: 20px;
+  }
+
+  .category-card h4 {
+    font-size: 20px;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+}
