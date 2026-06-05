@@ -1,6 +1,5 @@
 import { toast } from "react-hot-toast";
 import { DataService } from "../axios";
-import { setItem } from "../localStorage";
 import { handleApiError } from "@src/lib/handleApiError";
 
 export const postSubscribeEmail = (obj) => {

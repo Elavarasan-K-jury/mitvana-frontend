@@ -1,13 +1,10 @@
-import Header from "@src/components/Headers/Header";
 import React, { useEffect, useState } from "react";
 import FooterCosmetics from "@src/components/FooterCosmetics";
-import BelowFooter from "../below-footer";
 import HeaderCosmetics from "@src/components/HeaderCosmetics";
 import { useSearchParams } from "next/navigation";
-import { Button, Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Toaster, toast } from "react-hot-toast";
 import { resetPasswordAPI, requestPasswordRecover } from "@src/api/services/userService";
-import NewFooter from "@src/components/new_footer";
 
 function ResetPassword() {
   const searchParams = useSearchParams();

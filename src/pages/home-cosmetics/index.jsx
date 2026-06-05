@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 import HomeSection from "@pages/home-cosmetics/HomeSection";
-import CatSection from "@pages/home-cosmetics/CatSection";
-import ImageList from "@pages/home-cosmetics/ImageList";
-import BrandList from "@pages/home-cosmetics/BrandList";
 import FooterCosmetics from "@src/components/FooterCosmetics";
 import NewArrival from "@pages/home-cosmetics/NewArrival";
 import NowTrending from "@pages/home-cosmetics/NowTrending";
 import HeaderCosmetics from "@src/components/HeaderCosmetics";
 import { getProductForHomePage, getProduct } from "@src/api/services/productService";
-import PopupPage from "@src/components/Popup";
-import Topbnner from "@pages/home-cosmetics/Topbnner";
 import HeadTitle from "@src/commonsections/HeadTitle";
 import Promises from "@src/components/home/Promises";
 import Countries from "@src/components/home/Countries";

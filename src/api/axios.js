@@ -1,6 +1,6 @@
 import axios from "axios";
 import { getItem } from "./localStorage";
-import { getCookies, getCookie } from "cookies-next";
+import { getCookie } from "cookies-next";
 
 // export const API_ENDPOINT = `http://localhost:4000/api/v1`;
 // export const API_ENDPOINT = ` http://89.116.33.140:4000/api/v1`;

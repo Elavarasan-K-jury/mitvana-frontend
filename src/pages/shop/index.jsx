@@ -1,26 +1,16 @@
-import React, { useState, useEffect } from "react";
-import ShopNavbar from "@src/commonsections/ShopNavbar";
+import React, { useState, useEffect, useContext } from "react";
 import WomenColting from "@src/commonsections/WomenCloting";
 import FilterTab from "@src/pages/shop/FilterTab";
-import Link from "next/link";
-import FooterPage from "@src/components/Footer";
 import TopBanner from "@src/components/Headers/TopBanner";
-import Header from "@src/components/Headers/Header";
-import PopupPage from "@src/components/Popup";
 import HeadTitle from "@src/commonsections/HeadTitle";
 import FooterCosmetics from "@src/components/FooterCosmetics";
-import BelowFooter from "../below-footer";
 import HeaderCosmetics from "@src/components/HeaderCosmetics";
-import { useRouter } from "next/router";
 import LoginModal from "@src/components/Headers/LoginModal";
 import FloatingCartButton from "@src/pages/home-cosmetics/FloatingCartButton";
 import { useCartStore } from "@src/store/cartStore";
 import { CartWishlistContext } from "@src/context/CartWishlistContext";
-import { useContext } from "react";
 
 const FilterSiderbar = () => {
-  const router = useRouter();
-
   const [loginShow, setLoginShow] = useState(false);
     const { cartItem } = useCartStore();
   
@@ -37,9 +27,6 @@ const FilterSiderbar = () => {
 
   const handleLoginShow = () => {
     setLoginShow(true);
-  };
-  const handleSignUpClose = () => {
-    setSignupShow(false);
   };
   const handleLoginClose = () => setLoginShow(false);
   return (
@@ -71,7 +58,6 @@ const FilterSiderbar = () => {
       {/* <PopupPage /> */}
 
       <LoginModal
-        handleSignUpClose={handleSignUpClose}
         loginShow={loginShow}
         handleLoginClose={handleLoginClose}
       />

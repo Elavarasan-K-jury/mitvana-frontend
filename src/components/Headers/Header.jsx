@@ -1,44 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Col, Container, Dropdown, Row } from "react-bootstrap";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import LoginModal from "@src/components/Headers/LoginModal";
 import SearchModal from "@src/components/Headers/SearchModal";
 import ShoppingCardModal from "@src/commonsections/ShoppingCardModal";
-import MainModel from "@src/commonsections/MainModel";
 import MobileHeader from "@src/components/Headers/MobileHeader";
 
-import Image from "next/image";
-import AUD from "@assets/images/svg/aud.svg";
-import CAD from "@assets/images/svg/cad.svg";
-import DKK from "@assets/images/svg/dkk.svg";
-import EUR from "@assets/images/svg/eur.svg";
-import GBP from "@assets/images/svg/gbp.svg";
-import HKD from "@assets/images/svg/hkd.svg";
-import JPY from "@assets/images/svg/jpy.svg";
-import NZD from "@assets/images/svg/nzd.svg";
-import SGD from "@assets/images/svg/sgd.svg";
-import USD from "@assets/images/svg/usd.svg";
-import logo from "@assets/images/svg/kalles.svg";
 import Link from "next/link";
-import {
-  Features,
-  HeaderLayout,
-  HomePage1,
-  HomePage2,
-  ShopPage,
-  ProductLayout,
-  ProductDetail,
-  ProductSwatch,
-  ProductFeatures,
-  ShopFeatures,
-  ShopImage,
-  Portfolio,
-  Lookbook,
-  Blog,
-  sale,
-  salesSwiper,
-} from "@src/common/Header/header";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -49,155 +15,11 @@ import { getCartProducts } from "@src/api/services/cartService";
 import { getWishlistProducts } from "@src/api/services/wishlistService";
 import { useRouter } from "next/router";
 
-const country = [
-  {
-    name: "AUD",
-    image: AUD,
-  },
-  {
-    name: "CAD",
-    image: CAD,
-  },
-  {
-    name: "DKK",
-    image: DKK,
-  },
-  {
-    name: "EUR",
-    image: EUR,
-  },
-  {
-    name: "GBP",
-    image: GBP,
-  },
-  {
-    name: "HKD",
-    image: HKD,
-  },
-  {
-    name: "JPY",
-    image: JPY,
-  },
-  {
-    name: "NZD",
-    image: NZD,
-  },
-  {
-    name: "SGD",
-    image: SGD,
-  },
-  {
-    name: "USD",
-    image: USD,
-  },
-];
 
-const HeaderCard = ({ product }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [imageUrl, setImageUrl] = useState(product.imageUrl);
 
-  return (
-    <>
-      <div className="topbar-product-card pb-3">
-        <div className="position-relative">
-          {product.label && (
-            <span
-              className={`new-label text-white rounded-circle ${product.labelClass}`}
-            >
-              {product.label}
-            </span>
-          )}
 
-          {product.hoverImageUrl ? (
-            <Image
-              src={isHovered ? product.hoverImageUrl : imageUrl}
-              alt=""
-              className="img-fluid"
-              priority
-            />
-          ) : (
-            <Image src={imageUrl} alt="" className="img-fluid" priority />
-          )}
 
-          <Link
-            href="#"
-            className="wishlistadd position-absolute"
-            data-bs-toggle="tooltip"
-            data-bs-placement="top"
-            data-bs-title="Add to Wishlist"
-          >
-            <i className="facl facl-heart-o"></i>
-          </Link>
-          <div className="product-button d-flex flex-column gap-2">
-            <Link href="#!" className="btn rounded-pill fs-14">
-              <span>Quick View</span> <i className="iccl iccl-eye"></i>
-            </Link>
-            <Link href="#!" className="btn rounded-pill fs-14">
-              <span>Quick Shop</span> <i className="iccl iccl-cart"></i>
-            </Link>
-          </div>
-          <p className="product-size mb-0 text-center text-white fw-medium">
-            {product.size}
-          </p>
-        </div>
-        <div className="mt-3">
-          <h6 className="mb-1">
-            <Link href="#!" className="product-title">
-              {product.title}
-            </Link>
-          </h6>
-          {product.del ? (
-            <p className="mb-0 fs-14 text-muted">
-              <del>{product.del}</del>
-              <span className="text-danger"> {product.price}</span>
-            </p>
-          ) : (
-            <p className="mb-0 fs-14 text-muted"> {product.price}</p>
-          )}
 
-          {product.colors ? (
-            <div className="product-color-list mt-2 gap-2 d-flex align-items-center">
-              {product.colors &&
-                product.colors.map((color, index) => (
-                  <Link
-                    key={index}
-                    href="#!"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setImageUrl(color.imageUrl);
-                    }}
-                    style={{
-                      background: `url('${color.imageUrl.src}')`,
-                      backgroundSize: "cover",
-                    }}
-                    className={`d-inline-block ${color.color} rounded-circle`}
-                  ></Link>
-                ))}
-            </div>
-          ) : (
-            <div className="product-color-list mt-2 gap-2 d-flex align-items-center">
-              {product.color &&
-                product.color.map((color, index) => {
-                  return (
-                    <Link
-                      href="#!"
-                      key={index}
-                      onMouseOver={(e) => {
-                        e.preventDefault();
-                        setImageUrl(color.imageUrl);
-                        setIsHovered(false);
-                      }}
-                      className={`d-inline-block ${color.color} rounded-circle`}
-                    />
-                  );
-                })}
-            </div>
-          )}
-        </div>
-      </div>
-    </>
-  );
-};
 
 const Header = () => {
   const headerRef = useRef(null);
@@ -261,7 +83,8 @@ const Header = () => {
   }, []);
 
   const handleClose = () => setSearchShow(false);
-  const handleShow = () => setSearchShow(true);
+
+
 
   const handleShoppingClose = () => setShoppingShow(false);
 

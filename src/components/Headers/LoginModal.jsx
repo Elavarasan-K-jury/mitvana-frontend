@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { Modal, Button, Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import Link from "next/link";
 import SignUpModal from "./SignupModal";
 import { loginUser } from "@src/api/services/userService";
 import RecoverPassword from "./RecoverPassword";
 import { getItem, removeItemByKey } from "@src/api/localStorage";
 import MamaLoader from "../Loader";
-import { getUserDetail } from "@src/api/services/userService";
-import { setItem } from "@src/api/localStorage";
+
 import { toast } from "react-hot-toast";
 import { createPortal } from "react-dom";
 

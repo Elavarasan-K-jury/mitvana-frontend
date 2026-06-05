@@ -1,20 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
-  Button,
   Container,
-  OverlayTrigger,
   Row,
-  Tooltip,
 } from "react-bootstrap";
-import { WishlistData } from "@src/common/shop/ProductData";
 import AddToCardModal from "@src/commonsections/AddToCardModal";
 import ProductModal from "@src/commonsections/ProductModal";
-import Image from "next/image";
-import Link from "next/link";
-import { backendUrl } from "@src/api/axios";
-import { removeProductFromWishlist } from "@src/api/services/wishlistService";
 import ProductCard from "../home-cosmetics/ProductCard";
-import LoginModal from "@src/components/Headers/LoginModal";
 
 // const ProductCard = ({
 //   getWishlistDetail,

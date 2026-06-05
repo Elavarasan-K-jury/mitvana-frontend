@@ -5,7 +5,7 @@ export const useSearchStore = create((set, get) => ({
   searchValue: "",
   fullProductData: [],
   searchProductsFullData: [],
-  setSearchClicked: (value) =>
+  setSearchClicked: () =>
     set(() => ({ searchClicked: !get().searchClicked })),
   setSearchValue: (value) => set(() => ({ searchValue: value })),
   productUrl: "",
@@ -13,7 +13,7 @@ export const useSearchStore = create((set, get) => ({
   setProductUrl: (url) => set(() => ({ productUrl: url })),
   setSearchProductsFullData: (data) =>
     set(() => ({ searchProductsFullData: data })),
-  handleOnSearch: (query, result) => {
+  handleOnSearch: (query) => {
     if (query.length <= 0) {
       const fullProductData = get().fullProductData;
       set(() => ({ searchProductsFullData: fullProductData }));

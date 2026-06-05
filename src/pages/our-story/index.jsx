@@ -1,14 +1,11 @@
 import HeaderCosmetics from '@src/components/HeaderCosmetics'
 import React from 'react'
 import img1 from '@assets/images/story/img1.jpg'
-import img2 from '@assets/images/story/img2.jpg'
 import certified from '@assets/images/story/certified.png'
 import customers from '@assets/images/story/customers3.svg'
 import global from '@assets/images/story/global3.svg'
 import Image from 'next/image'
 import FooterCosmetics from '@src/components/FooterCosmetics'
-import BelowFooter from '../below-footer'
-import NewFooter from "@src/components/new_footer";
 import heroImg from "@assets/images/story/img2.jpg";
 import CountUp from "react-countup";
 

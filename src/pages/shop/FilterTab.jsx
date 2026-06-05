@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Col, Dropdown, Row } from "react-bootstrap";
+import { Dropdown, Row } from "react-bootstrap";
 import AddToCardModal from "@src/commonsections/AddToCardModal";
-// import Dropdown from 'react-bootstrap/Dropdown';
 import Link from "next/link";
 import toast, { Toaster } from "react-hot-toast";
 import { CiHeart } from "react-icons/ci";
@@ -10,17 +9,13 @@ import ProductModal from "@src/commonsections/ProductModal";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
 import {
   getProduct,
   getProductByCategoryId,
-  getUniquesSizes,
 } from "@src/api/services/productService";
 import { backendUrl } from "@src/api/axios";
 import { getCategory } from "@src/api/services/categoryService";
-// import { useRouter } from "next/router";
 import { useProduct } from "@src/context/ProductContext";
-import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { getItem, setItem } from "@src/api/localStorage";
 import { useSearchStore } from "@src/store/searchStore";
 import { addProductOnCart } from "@src/api/services/cartService";
@@ -30,7 +25,6 @@ import {
   addProductOnWishlist,
   removeProductFromWishlist,
 } from "@src/api/services/wishlistService";
-import { usePathname } from "next/navigation";
 import NotifyMeModal from "@src/commonsections/NotifyMeModal";
 
 const ProductCard = ({
@@ -169,12 +163,6 @@ const ProductCard = ({
   const isProductInWishlist = wishlistDetail?.some(
     (item) => item.product._id === product?._id
   );
-  const imageVariants = {
-    initial: { opacity: 0, y: 50 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -50 },
-  };
-
   const [modalShow, setModalShow] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState();
 
@@ -382,13 +370,11 @@ const FilterTab = ({ handleLoginShow, SelectedCategory }) => {
   const [productData, setProductData] = useState([]);
   const [filteredProductData, setFilteredProductData] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
-  const [sizeData, setSizeData] = useState([]);
   const [selectedSizes, setSelectedSizes] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
   const [categoryId, setCategoryId] = useState(SelectedCategory);
   const [open, setOpen] = useState(true);
   const [show, setShow] = useState(false);
-  const [searchProductData, setSearchProductData] = useState([]);
   const [cardShow, setCardShow] = useState(false);
   const [selectedProduct, setselectedProduct] = useState();
   const {
@@ -419,7 +405,6 @@ const FilterTab = ({ handleLoginShow, SelectedCategory }) => {
       });
       setCategoryData(sortedCategory);
       setProductData(resProduct);
-      setSearchProductData(resProduct);
       setSearchProductsFullData(resProduct);
       setFullProductData(resProduct);
       setFilteredProductData(resProduct);
@@ -439,14 +424,6 @@ const FilterTab = ({ handleLoginShow, SelectedCategory }) => {
     hanldeCategoryChange(SelectedCategory);
   }, [SelectedCategory]);
 
-  const toggleSizeSelection = (size) => {
-    setSelectedSizes((prevSizes) =>
-      prevSizes.includes(size)
-        ? prevSizes.filter((s) => s !== size)
-        : [...prevSizes, size]
-    );
-  };
-
   useEffect(() => {
     const path =
       location.pathname && location.pathname.includes("product-category")
@@ -459,7 +436,6 @@ const FilterTab = ({ handleLoginShow, SelectedCategory }) => {
         setProductData(resProduct);
         setFullProductData(resProduct);
         setSearchProductsFullData(resProduct);
-        setSearchProductData(resProduct);
         setFilteredProductData(resProduct);
         const sortedCategory = resCategory.sort((a, b) => {
           return a.name.localeCompare(b.name);

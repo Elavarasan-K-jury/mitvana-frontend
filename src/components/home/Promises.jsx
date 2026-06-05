@@ -1,4 +1,3 @@
-import React from 'react'
 import crueltyFree from '@assets/images/new-home/cruelty free.svg'
 import science from '@assets/images/new-home/science.svg'
 import natural from '@assets/images/new-home/natural.png'

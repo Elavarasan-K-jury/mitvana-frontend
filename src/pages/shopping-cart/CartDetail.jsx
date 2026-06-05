@@ -4,7 +4,6 @@ import { getItem, setItem } from "@src/api/localStorage";
 import {
   updateProductQuantity,
   removeProductFromCart,
-  clearCart,
 } from "@src/api/services/cartService";
 import { ToastContainer, toast } from "react-toastify";
 

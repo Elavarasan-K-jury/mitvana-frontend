@@ -61,11 +61,6 @@ const country = [
 const Topbnner = () => {
 
     const [isOpen, setIsOpen] = useState(true);
-    const [currency, setCurrency] = useState('USD');
-
-    const handleSelect = (eventKey) => {
-        setCurrency(eventKey);
-    };
 
     return (
         <>

@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import Image from "next/image";
-import { afacad } from "../pages/_app";
-import Link from "next/link";
 import { getReview } from "@src/api/services/reviewService";
 import { backendUrl } from "@src/api/axios";
 import { addProductOnCart } from "@src/api/services/cartService";
@@ -12,7 +8,7 @@ import { addProductOnWishlist } from "@src/api/services/wishlistService";
 import { toast } from "react-hot-toast";
 import { getProductById } from "@src/api/services/productService";
 import { Rating } from "@mui/material";
-import { ChevronLeft, ChevronRight, Maximize } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { createPortal } from "react-dom";
 
 const ProductModal = ({

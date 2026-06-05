@@ -1,4 +1,3 @@
-import React from 'react'
 import Image from 'next/image'
 import countries from '@assets/images/new-home/MAP-FINAL2.png'
 

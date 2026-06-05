@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
-import kalles from "@assets/images/svg/kalles.svg";
+
 import payment2 from "@assets/images/payment2.png";
 import ResponsiveFooter from "@src/components/ResponsiveFooter";
 

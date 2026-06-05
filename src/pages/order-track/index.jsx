@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from "react";
-import TopBanner from "@src/components/Headers/TopBanner";
 import HeadTitle from "@src/commonsections/HeadTitle";
 import FooterCosmetics from "@src/components/FooterCosmetics";
-import BelowFooter from "../below-footer";
 import HeaderCosmetics from "@src/components/HeaderCosmetics";
-import NewFooter from "@src/components/new_footer";
-import { Button } from "react-bootstrap";
 import { useRouter } from "next/router";
 import {
-  getOrderByOrderId,
   getOrderTrackDetailByOrderId,
 } from "@src/api/services/orderService";
 import { backendUrl } from "@src/api/axios";

@@ -1,16 +1,9 @@
 import React, { useEffect, useState } from "react";
-import WomenColting from "@src/commonsections/WomenCloting";
 import FilterTab from "./FilterTab";
-import ShopNavbar from "@src/commonsections/ShopNavbar";
-import FooterPage from "@src/components/Footer";
 import TopBanner from "@src/components/Headers/TopBanner";
-import Header from "@src/components/Headers/Header";
-import PopupPage from "@src/components/Popup";
-import Link from "next/link";
 import { getWishlistProducts } from "@src/api/services/wishlistService";
 import { BounceLoader } from "react-spinners";
 import FooterCosmetics from "@src/components/FooterCosmetics";
-import BelowFooter from "../below-footer";
 import shopBanner from '@assets/images/shop/shop-banner.jpg'
 import HeaderCosmetics from "@src/components/HeaderCosmetics";
 import dynamic from "next/dynamic";

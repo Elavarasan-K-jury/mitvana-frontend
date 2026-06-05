@@ -1,8 +1,6 @@
-import NewFooter from "@src/components/new_footer";
 import FooterCosmetics from "@src/components/FooterCosmetics";
 import HeaderCosmetics from "@src/components/HeaderCosmetics";
 import React from "react";
-import BelowFooter from "./below-footer";
 
 const FAQ = () => {
   return (

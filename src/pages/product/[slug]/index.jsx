@@ -6,7 +6,6 @@ import BreadCrumb from "@src/commonsections/BreadCrumb";
 import LikeProducts from "@src/commonsections/LikeProducts";
 import MobileAccordion from "@src/pages/product/MobileAccordion";
 import TopBanner from "@src/components/Headers/TopBanner";
-import Header from "@src/components/Headers/Header";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
@@ -14,12 +13,10 @@ import "swiper/css/thumbs";
 import ShoppingCardModal from "@src/commonsections/ShoppingCardModal";
 import HeadTitle from "@src/commonsections/HeadTitle";
 import FooterCosmetics from "@src/components/FooterCosmetics";
-import NewFooter from "@src/components/new_footer";
 import LoginModal from "@src/components/Headers/LoginModal";
 import { getProductById } from "@src/api/services/productService";
 import HeaderCosmetics from "@src/components/HeaderCosmetics";
 import { backendUrl } from "@src/api/axios";
-import BelowFooter from "@src/pages/below-footer";
 
 const ProductDetails = ({ productDetail, relatedProduct }) => {
   const [shoppingShow, setShoppingShow] = useState(false);

@@ -11,8 +11,6 @@ import img8 from "@assets/images/research/0050.png";
 import Image from "next/image";
 import { CircleCheck } from "lucide-react";
 import FooterCosmetics from "@src/components/FooterCosmetics";
-import NewFooter from "@src/components/new_footer";
-import BelowFooter from "../below-footer";
 
 function index() {
   return (

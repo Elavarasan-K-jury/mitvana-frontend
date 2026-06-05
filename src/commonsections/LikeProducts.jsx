@@ -1,13 +1,11 @@
 import Link from "next/link";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import "flickity/css/flickity.css";
 
-import Image from "next/image";
 import ProductModal from "./ProductModal";
 import AddToCardModal from "./AddToCardModal";
 import {
-  getProductByCategoryId,
   getProductByCategoryIdLiked,
 } from "@src/api/services/productService";
 import { backendUrl } from "@src/api/axios";

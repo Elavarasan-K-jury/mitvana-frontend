@@ -11,7 +11,7 @@ export const CartWishlistProvider = ({ children }) => {
   });
 
   const [wishlistDetail, setWishlistDetail] = useState([]);
-  const [loading, setLoading] = useState(false);
+
 
   const getCartDetail = useCallback(async () => {
     if (!getItem("accessToken")) {
@@ -62,7 +62,7 @@ export const CartWishlistProvider = ({ children }) => {
 
   return (
     <CartWishlistContext.Provider
-      value={{ cartDetail, wishlistDetail, getCartDetail, getWishlistDetail, loading }}
+      value={{ cartDetail, wishlistDetail, getCartDetail, getWishlistDetail }}
     >
       {children}
     </CartWishlistContext.Provider>

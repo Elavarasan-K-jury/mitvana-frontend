@@ -1,6 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Col, Dropdown, Row } from "react-bootstrap";
-import AddToCardModal from "@src/commonsections/AddToCardModal";
+import React, { useState, useContext } from "react";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import { CiHeart } from "react-icons/ci";
@@ -18,7 +16,6 @@ import {
   addProductOnWishlist,
   removeProductFromWishlist,
 } from "@src/api/services/wishlistService";
-import { motion } from "framer-motion";
 import NotifyMeModal from "@src/commonsections/NotifyMeModal";
 
 const ProductCard = ({
@@ -26,7 +23,6 @@ const ProductCard = ({
   product,
   colWidth,
   handleShow,
-  handleAddToCardModalShow,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { setCartItem } = useCartStore();

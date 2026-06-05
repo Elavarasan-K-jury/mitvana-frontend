@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Offcanvas, Button, Form } from "react-bootstrap";
-import Link from "next/link";
-import SignUpModal from "./SignupModal";
-import { loginUser, updateAddress } from "@src/api/services/userService";
+import { Offcanvas } from "react-bootstrap";
+import { updateAddress } from "@src/api/services/userService";
 
 import toast, { Toaster } from "react-hot-toast";
 

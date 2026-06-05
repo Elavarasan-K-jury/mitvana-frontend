@@ -1,19 +1,14 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import cart from "@assets/images/shopping-cart/shopping-cart-head.jpg";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import FooterPage from "@src/components/Footer";
+import { Button, Container, Form } from "react-bootstrap";
 import Image from "next/image";
-import { useRazorpay, RazorpayOrderOptions } from "react-razorpay";
+import { useRazorpay } from "react-razorpay";
 import TopBanner from "@src/components/Headers/TopBanner";
-import Header from "@src/components/Headers/Header";
 import HeadTitle from "@src/commonsections/HeadTitle";
-import { getCartProducts } from "@src/api/services/cartService";
 import { getShippingCharges } from "@src/api/services/shippingCharges";
-import { getAddress, getUserDetail } from "@src/api/services/userService";
-import "react-toastify/dist/ReactToastify.css";
+import { getAddress } from "@src/api/services/userService";
 import FooterCosmetics from "@src/components/FooterCosmetics";
-import BelowFooter from "../below-footer";
 
 import { useRouter } from "next/router";
 import {
@@ -23,18 +18,15 @@ import {
   getShippingPriceDetail,
   updateOrderStatus,
 } from "@src/api/services/orderService";
-import NewFooter from "@src/components/new_footer";
-import TimeLineWind from "@src/components/TimeLineWind";
 import HeaderCosmetics from "@src/components/HeaderCosmetics";
 import MamaLoader from "@src/components/Loader";
 import EditAddressModal from "@src/components/Headers/EditAddressModal";
 import toast, { Toaster } from "react-hot-toast";
-import { removeItem } from "@src/api/localStorage";
 
 const Checkout = () => {
   const router = useRouter();
   const { order } = router.query;
-  const { error, isLoading, Razorpay } = useRazorpay();
+  const { Razorpay } = useRazorpay();
   const [razorpayOrderId, setRazorpayOrderId] = useState("");
   const [editAddressShow, setEditAddressShow] = useState(false);
   const [addressDetail, setAddressDetail] = useState();

@@ -1,8 +1,6 @@
 import FooterCosmetics from "@src/components/FooterCosmetics";
 import HeaderCosmetics from "@src/components/HeaderCosmetics";
 import React from "react";
-import NewFooter from "@src/components/new_footer";
-import BelowFooter from "./below-footer";
 
 const ShippingDeliveryPolicy = () => {
   return (

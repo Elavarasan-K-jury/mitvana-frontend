@@ -1,7 +1,7 @@
 import Head from "next/head";
 import HomeCosmetics from "./home-cosmetics";
 
-export default function Home({ title }) {
+export default function Home() {
   return (
     <>
       <Head>

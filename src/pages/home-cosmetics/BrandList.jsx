@@ -1,13 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Container } from "react-bootstrap";
-import Image from "next/image";
 import Link from "next/link";
-
-import br1 from "@assets/images/home-cosmetics/br1.png";
-import br2 from "@assets/images/home-cosmetics/br2.png";
-import br3 from "@assets/images/home-cosmetics/br3.png";
-import br4 from "@assets/images/home-cosmetics/br4.png";
-import br5 from "@assets/images/home-cosmetics/br5.png";
 
 const brand = [
   {

@@ -1,27 +1,19 @@
-import Header from "@src/components/Headers/Header";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Orders from "./components/Orders";
 import Cart from "./components/Cart";
-import Wishlist from "./components/Wishlist";
 import Address from "./components/Address";
 import AccountDetails from "./components/AccountDetails";
 import LogoutModal from "./components/LogoutModal";
 import {
-  Bookmark,
-  BookMarked,
   LogOut,
   MapPinned,
   Package,
-  ShoppingCart,
   UserRoundCog,
 } from "lucide-react";
 import { getUserDetail } from "@src/api/services/userService";
 import FooterCosmetics from "@src/components/FooterCosmetics";
-import BelowFooter from "../below-footer";
-import NewFooter from "@src/components/new_footer";
 import HeaderCosmetics from "@src/components/HeaderCosmetics";
-import { Modal, Button } from "react-bootstrap";
 
 // Main Profile Component
 function Profile() {

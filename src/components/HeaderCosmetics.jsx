@@ -16,7 +16,6 @@ import {
   FlaskConical,
   Heart,
   LogOut,
-  Package,
   UserCircle,
 } from "lucide-react";
 import { toast } from "react-hot-toast";
@@ -29,7 +28,6 @@ import "swiper/css/free-mode";
 import "swiper/css/thumbs";
 import { getItem, getName } from "@src/api/localStorage";
 import { useRouter } from "next/router";
-import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { getProduct } from "@src/api/services/productService";
 import { CartWishlistContext } from "@src/context/CartWishlistContext";
 import { useCartStore } from "@src/store/cartStore";
@@ -50,7 +48,6 @@ const HeaderCosmetics = ({ loginShowProp, searchValue: externalSearchValue, setS
   const [show, setShow] = useState(false);
   const [searchShow, setSearchShow] = useState(false);
   const [shoppingShow, setShoppingShow] = useState(false);
-  const [showSearchbar, setShowSearchbar] = useState(false);
   const [categoryData, setCategoryData] = useState([]);
 
   const {
@@ -103,15 +100,6 @@ const HeaderCosmetics = ({ loginShowProp, searchValue: externalSearchValue, setS
 
   const [showUserDropDown, setShowUserDropDown] = useState(false);
 
-  const handleClick = () => {
-    setShow(!show);
-    // if (show === id) {
-    //   setShow(null);
-    // } else {
-    //   setShow(id);
-    // }
-  };
-
   function handleShowUserDropDown() {
     if (!token) {
       handleLoginShow();
@@ -137,11 +125,9 @@ const HeaderCosmetics = ({ loginShowProp, searchValue: externalSearchValue, setS
   }, []);
 
   const handleClose = () => setSearchShow(false);
-  const handleShow = () => setSearchShow(true);
   const router = useRouter();
 
   const handleShoppingClose = () => setShoppingShow(false);
-  const handleShoppingShow = () => setShoppingShow(true);
 
   const handleHeader = () => {
     setHeaderShow(true);
@@ -154,14 +140,9 @@ const HeaderCosmetics = ({ loginShowProp, searchValue: externalSearchValue, setS
   const handleLoginClose = () => setLoginShow(false);
   const handleHeaderClose = () => setHeaderShow(false);
   const cartItem = useCart();
-  const [isClient, setIsClient] = useState(false);
   const [token, setToken] = useState(null);
   const [userName, setUserName] = useState("");
   const [showLogoutModal, setShowLogoutModal] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   useEffect(() => {
     const loadUser = () => {

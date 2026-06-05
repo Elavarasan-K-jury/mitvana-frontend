@@ -3,7 +3,6 @@ import FooterCosmetics from "@src/components/FooterCosmetics";
 import HeaderCosmetics from "@src/components/HeaderCosmetics";
 import { DataService } from "@src/api/axios";
 import ReCAPTCHA from "react-google-recaptcha";
-import BelowFooter from "../below-footer";
 function Index() {
   const [formData, setFormData] = useState({
     name: "",

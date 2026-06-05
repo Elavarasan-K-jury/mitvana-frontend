@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Card, CardBody, Col, Row } from "react-bootstrap";
-import Link from "next/link";
-import Image from "next/image";
-import icondown from "@assets/images/single-product/icon-down.svg";
 import { backendUrl } from "@src/api/axios";
 import { getReview } from "@src/api/services/reviewService";
 import Rating from "@mui/material/Rating";

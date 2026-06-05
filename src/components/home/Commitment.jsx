@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 import wellness from "@assets/images/new-home/wellness.jpg";

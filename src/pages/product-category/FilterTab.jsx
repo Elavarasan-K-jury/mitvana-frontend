@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Col, Dropdown, Row } from "react-bootstrap";
+import { Dropdown, Row } from "react-bootstrap";
 import AddToCardModal from "@src/commonsections/AddToCardModal";
 import Link from "next/link";
 import toast, { Toaster } from "react-hot-toast";
@@ -11,13 +11,10 @@ import { useRouter } from "next/navigation";
 import {
   getProduct,
   getProductByCategoryId,
-  getUniquesSizes,
 } from "@src/api/services/productService";
 import { backendUrl } from "@src/api/axios";
 import { getCategory } from "@src/api/services/categoryService";
-// import { useRouter } from "next/router";
 import { useProduct } from "@src/context/ProductContext";
-import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import { getItem, setItem } from "@src/api/localStorage";
 import { useSearchStore } from "@src/store/searchStore";
 import { addProductOnCart } from "@src/api/services/cartService";
@@ -33,12 +30,11 @@ const ProductCard = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { setCartItem } = useCartStore();
-  const [imageUrl, setImageUrl] = useState(product.imageUrl);
   const { setProductId } = useProduct();
   let priceDisplay = "";
   const { cartDetail, wishlistDetail, getCartDetail, getWishlistDetail } =
     useContext(CartWishlistContext);
-  const { searchProductsFullData, setSearchProductsFullData, selectedColor } =
+  const { selectedColor } =
     useSearchStore();
 
   const isVideo = (media) => {
@@ -320,17 +316,14 @@ const FilterTab = ({ handleLoginShow, SelectedCategory }) => {
   const [productData, setProductData] = useState([]);
   const [filteredProductData, setFilteredProductData] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
-  const [sizeData, setSizeData] = useState([]);
   const [selectedSizes, setSelectedSizes] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
   const [categoryId, setCategoryId] = useState(SelectedCategory);
   const [open, setOpen] = useState(true);
   const [show, setShow] = useState(false);
-  const [searchProductData, setSearchProductData] = useState([]);
   const [cardShow, setCardShow] = useState(false);
   const [selectedProduct, setselectedProduct] = useState();
   const {
-    searchProductsFullData,
     setSearchProductsFullData,
     setFullProductData,
   } = useSearchStore();
@@ -353,22 +346,15 @@ const FilterTab = ({ handleLoginShow, SelectedCategory }) => {
   const handleAddToCardModalShow = () => setCardShow(true);
   const handleAddToCardModalClose = () => setCardShow(false);
 
-  const handleOpen = () => {
-    setOpen(!open);
-  };
-
   useEffect(() => {
     const fetchProduct = async () => {
       try {
         const resProduct = await getProduct();
         const resCategory = await getCategory();
-        const resSize = await getUniquesSizes();
-        setSizeData(resSize);
 
         setProductData(resProduct);
         setFullProductData(resProduct);
         setSearchProductsFullData(resProduct);
-        setSearchProductData(resProduct);
         setFilteredProductData(resProduct);
         setCategoryData(resCategory);
       } catch (error) {
@@ -412,7 +398,6 @@ const FilterTab = ({ handleLoginShow, SelectedCategory }) => {
         const resProduct = await getProductByCategoryId(categoryId);
         console.log(resProduct);
         setProductData(resProduct);
-        setSearchProductData(resProduct);
         setFilteredProductData(resProduct);
       } catch (error) {
         console.log(error);
@@ -445,19 +430,6 @@ const FilterTab = ({ handleLoginShow, SelectedCategory }) => {
     filterProducts();
   }, [selectedSizes, productData, range]);
 
-  const handleOnSearch = (query, result) => {
-    console.log("searching", query);
-    if (query.length <= 0) {
-      console.log(
-        "Query length in zero or lesse so setting it to prodycts data that is ",
-        productData
-      );
-
-      setProductData(productData);
-    } else {
-      setProductData(result);
-    }
-  };
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   const toggleFilter = () => {

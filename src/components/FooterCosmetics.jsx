@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+
 import Image from "next/image";
 import Link from "next/link";
 import footerIcons from "../assets/images/footer-icons.png";
@@ -10,101 +10,6 @@ import toast from "react-hot-toast";
 import { postSubscribeEmail } from "@src/api/services/subscribeService";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
-
-const footerlinks = [
-  {
-    title: "Categories",
-    links: [
-      {
-        name: "Men",
-        link: "",
-      },
-      {
-        name: "Women",
-        link: "",
-      },
-      {
-        name: "Accessories",
-        link: "",
-      },
-      {
-        name: "Shoes",
-        link: "",
-      },
-      {
-        name: "Denim",
-        link: "",
-      },
-      {
-        name: "Dress",
-        link: "",
-      },
-    ],
-  },
-  {
-    title: "Infomation",
-    links: [
-      {
-        name: "About Us",
-        link: "",
-      },
-      {
-        name: "contact Us",
-        link: "",
-      },
-      {
-        name: "Terms & Conditions",
-        link: "",
-      },
-      {
-        name: "Returns & Exchanges",
-        link: "",
-      },
-      {
-        name: "Shipping & Delivery",
-        link: "",
-      },
-      {
-        name: "Privacy Policy",
-        link: "",
-      },
-    ],
-  },
-
-  {
-    title: "Useful links",
-    links: [
-      {
-        name: "Store Location",
-        link: "",
-      },
-      {
-        name: "Latest News",
-        link: "",
-      },
-      {
-        name: "Link3",
-        link: "",
-      },
-      {
-        name: "My Account",
-        link: "",
-      },
-      {
-        name: "Size Guide",
-        link: "",
-      },
-      {
-        name: "FAQs 2",
-        link: "",
-      },
-      {
-        name: "FAQs",
-        link: "",
-      },
-    ],
-  },
-];
 
 // AccordionItem component for individual items
 const AccordionItem = ({ title, children, isOpen, onClick }) => {

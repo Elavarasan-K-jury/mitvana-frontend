@@ -1,7 +1,6 @@
 import HeaderCosmetics from "@src/components/HeaderCosmetics";
 import React from "react";
 import FooterCosmetics from "@src/components/FooterCosmetics";
-import BelowFooter from "./below-footer";
 
 const PrivacyPolcies = () => {
   return (

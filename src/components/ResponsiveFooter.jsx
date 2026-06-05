@@ -13,12 +13,10 @@ const ResponsiveFooter = () => {
   const [loginShow, setLoginShow] = useState(false);
   const { cartDetail, wishlistDetail, getCartDetail, getWishlistDetail } =
     useContext(CartWishlistContext);
-  const { setCartItem, cartItem: newCartItem } = useCartStore();
+  const { cartItem: newCartItem } = useCartStore();
 
   const handleShoppingClose = () => setShoppingShow(false);
-  const handleShoppingShow = () => setShoppingShow(true);
   const handleClose = () => setSearchShow(false);
-  const handleShow = () => setSearchShow(true);
   const handleLoginShow = () => {
     setLoginShow(true);
   };

@@ -1,16 +1,12 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import Image from "next/image";
-import cart1 from "@assets/images/shopping-cart/cart_image.png";
 import Link from "next/link";
 import { createOrder } from "@src/api/services/orderService";
 import { useRouter } from "next/router";
 import { useRouter as newUseRouter } from "next/navigation";
 import { useCartStore } from "@src/store/cartStore";
 import { getItem, removeItemByKey, setItem } from "@src/api/localStorage";
-import LoginModal from "@src/components/Headers/LoginModal";
 import {
-  alppyCouponCode,
   validateCouponCode,
 } from "@src/api/services/couponService";
 import { toast } from "react-hot-toast";

@@ -1,6 +1,6 @@
 import { toast } from "react-hot-toast";
 import { API_ENDPOINT, DataService } from "../axios";
-import { setItem, getItem } from "../localStorage";
+import { getItem } from "../localStorage";
 import { handleApiError } from "@src/lib/handleApiError";
 
 export const addProductOnCart = (obj) => {

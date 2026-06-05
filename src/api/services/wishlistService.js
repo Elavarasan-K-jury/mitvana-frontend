@@ -1,10 +1,6 @@
 import { toast } from "react-hot-toast";
 import { DataService } from "../axios";
-import { setItem } from "../localStorage";
-import { getItem } from "@src/api/localStorage";
 import { handleApiError } from "@src/lib/handleApiError";
-
-const token = getItem("accessToken");
 
 export const addProductOnWishlist = async (obj) => {
   try {

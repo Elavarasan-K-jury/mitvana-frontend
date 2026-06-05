@@ -7,15 +7,11 @@ import {
   Modal,
   Card,
   CardBody,
-  Dropdown,
   Button,
 } from "react-bootstrap";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import "react-toastify/dist/ReactToastify.css";
 import { afacad } from "../_app";
-
-import thumbsticky from "@assets/images/single-product/layout-02/thumb-sticky.jpg";
 import { backendUrl } from "@src/api/axios";
 import { addReview, getReview } from "@src/api/services/reviewService";
 import Rating from "@mui/material/Rating";

@@ -1,5 +1,5 @@
 import { toast } from "react-hot-toast";
-import { API_ENDPOINT, DataService } from "../axios";
+import { DataService } from "../axios";
 import { handleApiError } from "@src/lib/handleApiError";
 
 export const createOrder = (obj) => {

@@ -1,7 +1,5 @@
-import Image from "next/image";
 import React, { useState } from "react";
 import ProductModal from "@src/commonsections/ProductModal";
-import AddToCardModal from "@src/commonsections/AddToCardModal";
 import ProductCard from "./ProductCard";
 
 

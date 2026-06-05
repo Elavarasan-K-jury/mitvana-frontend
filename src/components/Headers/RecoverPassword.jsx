@@ -3,7 +3,7 @@ import { Modal, Button, Form } from "react-bootstrap";
 import { requestPasswordRecover } from "@src/api/services/userService";
 import toast from "react-hot-toast";
 
-const RecoverPassword = ({ signupShow, handleSignUpClose, handleLoginClose }) => {
+const RecoverPassword = ({ signupShow, handleSignUpClose }) => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 

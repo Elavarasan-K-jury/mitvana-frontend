@@ -1,20 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import ProductModal from "@src/commonsections/ProductModal";
 // import MainModel from "@src/commonsections/MainModel";
 import ProductCard from "./ProductCard";
 import "flickity/css/flickity.css";
 
 const NowTrending = ({ handleLoginShow, products }) => {
-  const [isOpen, setIsOpen] = useState(true); // Automatically open on page load
   const [selectedProduct, setSelectedProduct] = useState();
   const [show, setShow] = useState(false);
-
-  // Ensure modal auto-opens with a slight delay
-  useEffect(() => {
-    const timer = setTimeout(() => setIsOpen(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
 
  
   const handleShow = (product) => {

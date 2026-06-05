@@ -4,7 +4,6 @@ import { setItem } from "../localStorage";
 import { getItem } from "@src/api/localStorage";
 import { handleApiError } from "@src/lib/handleApiError";
 import { setCookie } from "cookies-next";
-const token = getItem("accessToken");
 export const userRegister = (data) => {
   return DataService.post("/user/register", data, false)
     .then((res) => {

@@ -5,13 +5,8 @@ import {
   Row,
   Col,
   Button,
-  Tooltip,
-  OverlayTrigger,
 } from "react-bootstrap";
 import {
-  ArrowRight,
-  BadgePercent,
-  MapPin,
   MapPinCheck,
   MapPinX,
 } from "lucide-react";
@@ -21,10 +16,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
-import Drift from "drift-zoom";
 import Link from "next/link";
 import { backendUrl } from "@src/api/axios";
-import "drift-zoom/dist/drift-basic.css";
 import Rating from "@mui/material/Rating";
 import {
   getDeliveryDateByPincode,
@@ -49,10 +42,7 @@ import {
   Maximize,
   Minimize,
 } from "lucide-react";
-import {
-  DeliveryAndReturnModal,
-  Question,
-} from "@src/components/ProductModal/ProductModals";
+
 import { useSearchStore } from "@src/store/searchStore";
 import { useRouter } from "next/router";
 import { useProduct } from "@src/context/ProductContext";
